@@ -5,11 +5,37 @@
                
                 record-id="001Qy00000uK36OIAS"
                 object-api-name="Account"
-                layout-type="Compact"
+               
                 columns="2"
-                mode="Edit"
-                >
+                mode="view"
+                fields={fields}
+                onsuccess={handleSuccess}
+                 onerror={handleError}
+                  onsubmit={handleSubmit}
+              oncancel={handleCancel}
+              onload={handleLoad}
+                 >
         </lightning-record-form>
+
+    </div>
+    <div>
+        <!-- Edit Form -->
+        <lightning-record-edit-form record-id="001Qy00000uK36OIAS" object-api-name="Account">
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="Rating"></lightning-input-field>
+            <lightning-input-field field-name="Industry"></lightning-input-field>
+            <lightning-input-field field-name="ParentId"></lightning-input-field>
+            <button type="submit" value="Submit">Submit</button>
+        </lightning-record-edit-form>
+    </div>
+    
+    <div>
+        <!-- View Form -->
+        <lightning-record-view-form record-id="001Qy00000uK36OIAS" object-api-name="Account">
+            <lightning-output-field field-name="Name"></lightning-output-field>
+            <lightning-output-field field-name="Rating"></lightning-output-field>
+            <lightning-output-field field-name="Industry"></lightning-output-field>
+        </lightning-record-view-form>
     </div>
     </lightning-card>
 </template>
