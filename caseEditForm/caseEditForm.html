@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Edit Case" icon-name="standard:case">
+        <lightning-record-edit-form
+            record-id={recordId}
+            object-api-name="Case"
+            onsuccess={handleSuccess}>
+            <!-- Editable fields -->
+            <lightning-input-field field-name="CaseNumber"></lightning-input-field>
+            <lightning-input-field field-name="Status"></lightning-input-field>
+            <lightning-input-field field-name="Priority"></lightning-input-field>
+            <lightning-input-field field-name="AccountId"></lightning-input-field>
+            <lightning-input-field field-name="ContactId"></lightning-input-field>
+            <lightning-input-field field-name="Description"></lightning-input-field>
+            <!-- Submit button -->
+            <lightning-button variant="brand" type="submit" label="Save"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
